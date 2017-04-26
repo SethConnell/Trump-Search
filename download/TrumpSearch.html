@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn1.iconfinder.com/data/icons/rounded-flat-country-flag-collection-1/2000/us-01.png"/>
+    <title>Trump Search</title>
+</head>
+<body>
+    <style>
+        .blue {
+            color: royalblue;
+        }
+        .red {
+            color: indianred;
+        }
+        #search {
+            
+            margin: auto;
+            height: 50px;
+            width: 75%;
+            display: block;
+        }
+        input { 
+            font-size: 50px; 
+        }
+        #searchbutton {
+            width: 20%;
+            height: 50px;
+            background-color: royalblue; /* blue */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        #searchbutton:hover {
+            background-color: indianred;
+        }
+        html,
+        body,
+        .container {
+          height: 80%;
+          width: 100%;
+        }
+        h1 {
+            margin-top: 150px;
+            display: block;
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+    <script>
+    function redirect() {
+        openInNewTab(document.getElementById('search').value);
+        return false;
+    }
+
+    function openInNewTab(url) {
+      var win = window.open("https://www.google.com/#q=" + url, '_blank');
+      win.focus();
+    }
+    </script>
+    <h1><span class = "red">Trump</span> <span class = "blue">Search</span></h1>
+    <form onsubmit="return redirect();">
+    <input id="search" type="text" />
+    <input id = "searchbutton" type="submit" value="Search">
+    </form>
+
+</body>
